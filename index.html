@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazazi Abanikanda - Cloud Engineer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            color: #333; /* Darker gray for general text */
+        }
+
+        .container {
+            max-width: 1200px;
+        }
+
+        /* Custom animation for fade-in effect */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        /* New gradient background using muted greens */
+        .gradient-bg {
+            background: linear-gradient(to right, #10b981, #059669); /* Emerald 600 to Emerald 700 */
+        }
+
+        /* Specific text color for headings */
+        .text-accent {
+            color: #047857; /* Darker emerald for headings */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="gradient-bg text-white p-6 rounded-b-lg shadow-md">
+        <div class="container mx-auto flex flex-col justify-center items-center text-center">
+            <h1 class="text-3xl font-bold mb-1">Fazazi Abanikanda</h1>
+            <p class="text-lg">Cloud Engineer</p>
+            <p class="text-md mt-1">AltSchool ID: ALT/SOE/024/2648</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- Introduction Section -->
+        <section class="my-8 p-6 bg-white rounded-lg card fade-in delay-100">
+            <h2 class="text-2xl font-semibold mb-4 text-accent">Greetings!</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Welcome to my professional page. I am Fazazi Abanikanda, a dedicated Cloud Engineer with a focus on creating innovative and scalable digital solutions.
+            </p>
+        </section>
+
+        <!-- Project Pitch Section -->
+        <section class="my-8 p-6 bg-white rounded-lg card fade-in delay-200">
+            <h2 class="text-2xl font-semibold mb-4 text-accent">Project: A Website for Hamdan Confectionary</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                This project aims to develop a modern, user-friendly website for Hamdan Confectionary, enhancing their online presence and streamlining customer engagement. By leveraging cloud infrastructure, the platform will offer scalable e-commerce capabilities and personalized user experiences, setting a new standard for digital interaction in the confectionary industry.
+            </p>
+            <button id="learnMoreBtn" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                Learn More About This Project
+            </button>
+            <div id="projectDetails" class="hidden mt-4 text-gray-600">
+                <p>This website will feature an intuitive product catalog, secure online ordering, customer accounts, and potentially a blog or news section to engage visitors. The cloud infrastructure ensures high availability and easy scaling as the business grows.</p>
+            </div>
+        </section>
+
+        <!-- Professional Bio Section -->
+        <section class="my-8 p-6 bg-white rounded-lg card fade-in delay-300">
+            <h2 class="text-2xl font-semibold mb-4 text-accent">Professional Bio</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                I am Fazazi Abanikanda, a **Cloud Engineer** with a passion for building robust and scalable digital solutions. My expertise lies in **Database administration**, coupled with strong **HTML and CSS skills** for front-end development and **Python Programming** for back-end logic and automation.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Throughout my career, I've engaged in practical projects that highlight my technical capabilities. Notable among these include developing a **Love Calculator using Python**, which honed my programming and logic skills, and successfully executing an **Oracle Database Installation on an EC2 instance**, demonstrating my proficiency in cloud infrastructure and database management.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                Currently, I am expanding my knowledge and practical experience by **studying Cloud Engineering at ALTSCHOOL Africa**, further deepening my understanding of modern cloud architectures and deployment strategies. I am committed to leveraging my diverse skill set to create impactful and innovative web solutions.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="gradient-bg text-white p-6 mt-8 rounded-t-lg shadow-md">
+        <div class="container mx-auto text-center text-sm">
+            &copy; <span id="currentYear"></span> Fazazi Abanikanda. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // Simple interactivity: Toggle project details
+            const learnMoreBtn = document.getElementById('learnMoreBtn');
+            const projectDetails = document.getElementById('projectDetails');
+
+            learnMoreBtn.addEventListener('click', () => {
+                if (projectDetails.classList.contains('hidden')) {
+                    projectDetails.classList.remove('hidden');
+                    learnMoreBtn.textContent = 'Hide Project Details';
+                } else {
+                    projectDetails.classList.add('hidden');
+                    learnMoreBtn.textContent = 'Learn More About This Project';
+                }
+            });
+
+            // Add fade-in delays to sections
+            const sections = document.querySelectorAll('.fade-in');
+            sections.forEach((section, index) => {
+                section.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* style.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6; /* Light gray background */
+    color: #333; /* Darker gray for general text */
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Custom animation for fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* New gradient background using muted greens */
+.gradient-bg {
+    background: linear-gradient(to right, #10b981, #059669); /* Emerald 600 to Emerald 700 */
+}
+
+/* Specific text color for headings */
+.text-accent {
+    color: #047857; /* Darker emerald for headings */
+}
