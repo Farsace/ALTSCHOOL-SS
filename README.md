@@ -77,6 +77,8 @@ sudo systemctl reload nginx
 ## SCREENSHOT
 
 Below is the screenshot of my landing page as instructed by ALTSCHOOL AFRICA
+![image](https://github.com/user-attachments/assets/b28551b1-e5f1-4896-aa4c-f3d7a8c920f1)
+
 
 
 ## PUBLIC IP ADDRESS
